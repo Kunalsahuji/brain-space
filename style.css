@@ -9,30 +9,27 @@ body {
     height: 100%;
     width: 100%;
     cursor: none;
-
 }
 
 .cursor {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    mix-blend-mode: difference;
     position: fixed;
+    z-index: 99;
     background-color: #fff;
-    z-index: 999;
-    transform: scale(1.5);
+    mix-blend-mode: difference;
 }
 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.3vw 7.5vw;
+    padding: 1.5vw 8vw;
     position: fixed;
     width: 100%;
-    z-index: 9;
     mix-blend-mode: difference;
-    cursor: none;
+    z-index: 9;
 }
 
 .nav-right {
@@ -43,28 +40,20 @@ nav {
 
 .nav-right h4 {
     text-transform: uppercase;
+    font-size: 0.9vw;
     color: #fff;
-    font-size: .9vw;
-    /* text-decoration: none; */
-
 }
 
 nav i {
-    display: none;
     font-size: 1.5vw;
-    color: #fff;
-}
-
-.page1 {
-    width: 100%;
-    height: 100vh;
-    position: relative;
+    color: white;
+    display: none;
 }
 
 video {
+    object-fit: cover;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -72,9 +61,91 @@ video {
     border-bottom-right-radius: 100px;
 }
 
-.page2 {
-    width: 100%;
+
+
+
+/* .main{
+
+} */
+.page1 {
     height: 100vh;
+    width: 100%;
     position: relative;
-    background-color: #fff;
+}
+
+.page2 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    /* color: white; */
+    padding: 8vw 5vw;
+}
+
+.page2 h2 {
+    font-size: 1.5vw;
+    letter-spacing: 4px;
+    word-spacing: 5px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.page2-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5vw;
+}
+
+.page2-left {
+    height: 400px;
+    width: 42%;
+    background-color: rgb(237, 237, 237);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.blur {
+    height: 100%;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.325);
+    backdrop-filter: blur(20px);
+    position: relative;
+    z-index: 10;
+
+}
+
+.page2-left img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.page2-right {
+    height: 400px;
+    width: 45%;
+}
+
+.page2-right h1 {
+    font-size: 3vw;
+    font-weight: 500;
+}
+
+.page2-right p {
+    font-size: 1.3vw;
+    font-weight: 300;
+    margin: 2vw 0;
+}
+
+
+.page2-right button {
+    font-size: 1.1vw;
+    font-weight: 500;
+    padding: 14px 30px;
+    border-radius: 50px;
+    border: 2px solid #000;
+    background-color: transparent;
+
 }
