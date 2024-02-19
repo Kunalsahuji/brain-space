@@ -1,3 +1,8 @@
+@font-face {
+    font-family: archi;
+    src: url(/archia-bold-webfont.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +13,8 @@ html,
 body {
     height: 100%;
     width: 100%;
-    cursor: none;
+    cursor: inherit;
+    overflow-x: hidden;
 }
 
 .cursor {
@@ -20,6 +26,23 @@ body {
     background-color: #fff;
     mix-blend-mode: difference;
 }
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* button:hover {
+
+    color: rgba(255, 255, 255, 0.445);
+    background-color: #0e030300;
+    box-shadow: -1px -1px 100px rgba(255, 255, 255, 0.445);
+    transition: 0.5s ease-in-out;
+}
+
+video:hover {
+    transform: scale(1.1);
+    transition: 0.5s linear;
+} */
 
 nav {
     display: flex;
@@ -50,7 +73,49 @@ nav i {
     display: none;
 }
 
-video {
+.page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* ----- */
+.page1 h1 {
+    font-family: archi;
+
+    position: absolute;
+    bottom: 20%;
+    font-weight: 100;
+    z-index: 9;
+    left: 10%;
+    font-size: 4vw;
+    color: #fff;
+    width: 50%;
+}
+
+.page1 h1::after {
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 50px;
+    animation: kuch 0.3s infinite linear;
+    background-color: #fff;
+}
+
+.page1 h1 span {
+    display: none;
+    font-family: archi;
+}
+
+@keyframes kuch {
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ------ */
+
+.page1 video {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -61,59 +126,48 @@ video {
     border-bottom-right-radius: 100px;
 }
 
-
-
-
-/* .main{
-
-} */
-.page1 {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-}
-
+/* ------------------------------------------------------------------------ */
 .page2 {
     height: 100vh;
     width: 100%;
     position: relative;
-    /* color: white; */
-    padding: 8vw 5vw;
+    padding: 3vw 7vw;
 }
 
 .page2 h2 {
     font-size: 1.5vw;
     letter-spacing: 4px;
-    word-spacing: 5px;
+    word-spacing: 4px;
     font-weight: 300;
     text-transform: uppercase;
     text-align: center;
+    margin-top: 5vw;
 }
 
 .page2-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 5vw;
+    margin-top: 7.8vw;
 }
 
 .page2-left {
-    height: 400px;
-    width: 42%;
-    background-color: rgb(237, 237, 237);
-    border-radius: 10px;
+    height: 350px;
+    width: 41.5%;
+    background-color: rgba(247, 244, 244, 0.977);
+    border-radius: 20px;
     position: relative;
     overflow: hidden;
+
 }
 
 .blur {
     height: 100%;
     width: 50%;
-    background-color: rgba(255, 255, 255, 0.325);
+    background-color: rgba(255, 250, 000, 0.000);
     backdrop-filter: blur(20px);
     position: relative;
     z-index: 10;
-
 }
 
 .page2-left img {
@@ -124,17 +178,18 @@ video {
 }
 
 .page2-right {
-    height: 400px;
-    width: 45%;
+    height: 360px;
+    width: 47%;
+    margin-right: 2.5vw;
 }
 
 .page2-right h1 {
-    font-size: 3vw;
-    font-weight: 500;
+    font-size: 3.5vw;
+    font-weight: 300;
 }
 
 .page2-right p {
-    font-size: 1.3vw;
+    font-size: 1.48vw;
     font-weight: 300;
     margin: 2vw 0;
 }
@@ -148,4 +203,452 @@ video {
     border: 2px solid #000;
     background-color: transparent;
 
+}
+
+/* ------------------------------------------- */
+.page2-bottom-pg2 {
+    height: 100vh;
+    width: 100%;
+    padding: 3vw 7vw;
+
+}
+
+.page2-bottom-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4vw 0;
+    font-family: 'archi';
+}
+
+.page2-bottom-content-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.page2-bottom-content-left h2 {
+    font-size: 3.25vw;
+    font-weight: 200;
+
+}
+
+.page2-bottom-content-left p {
+    font-size: 1.3vw;
+    font-weight: lighter;
+}
+
+.page2-bottom-content-left button {
+    font-size: 1.1vw;
+    font-weight: 500;
+    padding: 14px 30px;
+    border-radius: 50px;
+    border: 2px solid #000;
+    background-color: transparent;
+    position: relative;
+    right: 32%;
+    top: 5%;
+}
+
+.page2-bottom-content-right {
+    width: 50%;
+    height: 100%;
+    padding: 2.5vw;
+
+
+}
+
+.page2-bottom-content-right video {
+    object-fit: cover;
+    width: 90%;
+    height: 85%;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4.5vw;
+
+
+}
+
+/* ------------------------------------------------------------------ */
+
+.page3 {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/download.png);
+    background-size: cover;
+    background-position: top;
+    padding-bottom: 10vw;
+    font-family: 'archi';
+}
+
+.page3 .page3-top {
+    width: 100%;
+    height: 100px;
+}
+
+.helmet {
+    width: 100%;
+}
+
+.page3-content-1 {
+    width: 100%;
+    padding: 5vw 0;
+    text-align: center;
+}
+
+.page3-content-1 h2 {
+    font-size: 3vw;
+    font-weight: 100;
+}
+
+.page3-content-1 p {
+    font-size: 1.5vw;
+    font-weight: 100;
+    margin: 2vw 0;
+}
+
+.page3-content-1 button {
+    padding: 1vw 2vw;
+    border-radius: 50px;
+    border: 2px solid #000;
+    background-color: transparent;
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+
+.page3-content-2 {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7vw;
+}
+
+.page3-content-2 video {
+    height: 95%;
+    width: 40%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.page3-content-2 h5 {
+    font-size: 2vw;
+    width: 50%;
+    font-weight: 100;
+    font-family: archi;
+}
+
+/* ---------------------------- */
+.page3-part-2 {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'archi';
+    padding: 0 5vw;
+}
+
+.page3-part-2-step-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50vh;
+    margin-top: 8vw;
+    padding: 0 2vw;
+}
+
+.page3-part-2-left {
+    height: 100%;
+    width: 50%;
+}
+
+.page3-part-2-left video {
+    width: 80%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.page3-part-2-right {
+    height: 100%;
+    width: 50%;
+}
+
+.page3-part-2-right h5 {
+    font-size: 2vw;
+    width: 100%;
+    height: 100%;
+    font-weight: 100;
+    font-family: archi;
+}
+
+.page3-part-2-right button {
+    padding: 1vw 2vw;
+    border-radius: 50px;
+    border: 2px solid #000;
+    background-color: transparent;
+    font-size: 1.2vw;
+    font-weight: 500;
+    position: relative;
+    bottom: 50%;
+
+}
+
+/* ....................... */
+.page3-part-2-step-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50vh;
+    margin-top: 10vw;
+    padding: 0 2.5vw;
+}
+
+.page3-part-2-left-1 {
+    height: 100%;
+    width: 55%;
+}
+
+.page3-part-2-left-1 h5 {
+    font-size: 2vw;
+    width: 100%;
+    height: 50%;
+    font-weight: 100;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    font-family: archi;
+}
+
+.page3-part-2-right-1 {
+    height: 100%;
+    width: 50%;
+}
+
+.page3-part-2-right-1 video {
+    width: 85%;
+    height: 95%;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-left: 7vw;
+}
+
+/* ..................................................... */
+.page3-part-2-step-3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50vh;
+    margin-top: 8vw;
+    padding: 0 2.5vw;
+}
+
+.page3-part-2-left-2 {
+    height: 100%;
+    width: 50%;
+}
+
+.page3-part-2-left-2 video {
+    width: 80%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.page3-part-2-right-2 {
+    height: 100%;
+    width: 50%;
+}
+
+.page3-part-2-right-2 h5 {
+    font-size: 2vw;
+    width: 100%;
+    height: 100%;
+    font-weight: 100;
+    font-family: archi;
+}
+
+.page3-part-2-right-2 button {
+    padding: 1vw 2vw;
+    border-radius: 50px;
+    border: 2px solid #000;
+    background-color: transparent;
+    font-size: 1.2vw;
+    font-weight: 500;
+    position: relative;
+    bottom: 50%;
+}
+
+/* ---------page3-end--------- */
+.page4 {
+    width: 100%;
+    height: 120vh;
+    background-image: url(https://www.brain.space/wp-content/themes/brain.space/assets/bg/home/ecosystem_bg.jpg);
+    background-size: cover;
+    padding: 0vw;
+}
+
+.page4>h2 {
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    font-family: monospace;
+    letter-spacing: 6.5px;
+    font-size: 1.45vw;
+    padding-top: 6.5vw;
+}
+
+.page4-content {
+    height: 120vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 5.5vw;
+    flex-wrap: nowrap;
+}
+
+.page4-info {
+    flex-shrink: 0;
+    width: 33vw;
+    height: 90%;
+    padding: 0 1.5vw;
+    margin-right: 5vw;
+}
+
+.page4-info h2 {
+    font-family: archi;
+    font-size: 3vw;
+    padding-top: 4.5vw;
+    line-height: -100px;
+    color: #f6f1f1f6;
+}
+
+.page4-info p {
+    font-size: 1.6vw;
+    font-weight: 100;
+    margin-top: .5vw;
+    color: #ffffffdd;
+}
+
+.page4-info button {
+    font-size: 1.3vw;
+    padding: 1vw 2vw;
+    border-radius: 50px;
+    border: 2px solid #000;
+    background-color: transparent;
+    font-weight: 600;
+    margin-top: 2.5vw;
+
+}
+
+
+.page4-elems {
+    flex-shrink: 0;
+    height: 90vh;
+    width: 40vw;
+    background-color: rgba(255, 255, 255, 0.182);
+    -webkit-mask-image: url(https://www.brain.space/wp-content/themes/brain.space/assets/bg/home/ecosystem-box_bg_mob.svg);
+    -webkit-mask-size: cover;
+    -webkit-mask-position: bottom;
+    -webkit-mask-repeat: no-repeat;
+    backdrop-filter: blur(20px);
+    padding: 4vw 4vw;
+    margin: 0 1.5vw;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: -13.5vw;
+
+}
+
+.page4-elems img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 4.5vw;
+    object-position: center;
+}
+
+.page4-elems h2 {
+    font-family: archi;
+    font-size: 3vw;
+    margin-bottom: 2vw;
+    font-weight: 100;
+}
+
+.page4-elems p {
+    font-family: archi;
+    font-weight: 300;
+    font-size: 1.1vw;
+    margin-bottom: 2.1vw;
+    color: rgba(0, 0, 0, 0.514);
+}
+
+.page4-elems i {
+    font-size: 3vw;
+    height: 5vw;
+    width: 3vw;
+    color: rgba(255, 255, 255, 0.804);
+    position: absolute;
+    bottom: 1%;
+    right: 12%;
+
+}
+
+.page4-elems #txt {
+    font-size: 2.5vw;
+    position: absolute;
+    bottom: 0.7%;
+    right: 2%;
+    color: rgba(255, 255, 255, 0.804);
+    border: 5px solid rgba(255, 255, 255, 0.804);
+    border-radius: 50%;
+}
+
+.page4-slider {
+    height: 5px;
+    width: 60%;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    background-color: rgb(255, 255, 255);
+    transform: translate(-50%, 0);
+    overflow: hidden;
+}
+
+.page4 #slider-in {
+    height: 100%;
+    width: 17vw;
+    background-color: black;
+}
+
+
+
+.page5 {
+    width: 100%;
+    height: 100vh;
+    background: conic-gradient(at 0 0, rgb(255, 228, 233), aliceblue, rgb(205, 243, 255), rgb(195, 255, 195), lightyellow, rgb(251, 226, 230));
+    padding: 4vw;
+}
+
+
+#page5-in {
+    height: 100%;
+    width: 100%;
+    background-color: #c4c4c459;
+    border-radius: 30px;
+    backdrop-filter: blur(50px);
 }
