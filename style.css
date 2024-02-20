@@ -1,6 +1,22 @@
 @font-face {
     font-family: archi;
     src: url(/archia-bold-webfont.ttf);
+    font-weight: 200;
+    /* font-family: archia; */
+    /* padding: 5vw 7vw 2vw 5vw; */
+    /* color: #000000; */
+    /* color: #2b28282d;
+    font-style: normal;
+    font-variant: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-variation-settings: normal;
+    text-transform: none;
+    font: stretch 100%;
+    text-transform: none;
+    text-decoration: one solid rgb(34, 34, 34);
+    text-align: start;
+    text-indent: 0px; */
 }
 
 * {
@@ -530,7 +546,7 @@ nav i {
 .page4-info h2 {
     font-family: archi;
     font-size: 3vw;
-    padding-top: 4.5vw;
+    padding-top: 3.5vw;
     line-height: -100px;
     color: #f6f1f1f6;
 }
@@ -639,16 +655,103 @@ nav i {
 
 .page5 {
     width: 100%;
-    height: 100vh;
+    min-height: 110vh;
     background: conic-gradient(at 0 0, rgb(255, 228, 233), aliceblue, rgb(205, 243, 255), rgb(195, 255, 195), lightyellow, rgb(251, 226, 230));
-    padding: 4vw;
 }
 
 
-#page5-in {
-    height: 100%;
+.page5-in {
+    min-height: 200vh;
     width: 100%;
     background-color: #c4c4c459;
-    border-radius: 30px;
+    border-radius: 10px;
     backdrop-filter: blur(50px);
+}
+
+.page5-in .first-text {
+    /* font-size: 54px; */
+    /* font-weight: 200;
+    font-family: archia;
+    color: #000000;
+    font-style: normal;
+    font-variant: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-variation-settings: normal;
+    text-transform: none;
+    font: stretch 100%;
+    text-transform: none;
+    text-decoration: one solid rgb(34, 34, 34);
+    text-align: start;
+    text-indent: 0px; */
+    /* padding: 9vw 8vw 1vw 8vw; */
+    font-size: 4.2vw;
+    color: #000000d2;
+    padding: 8vw 8vw 2vw 8vw;
+    width: 100%;
+    font-weight: 400;
+
+}
+
+.page5-info {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    padding: 0 6.5vw;
+}
+
+.page5-info-left {
+    width: 49%;
+    height: 50%;
+}
+
+.page5-info-left p {
+    font-size: 2.1vw;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    width: 100%;
+    padding-left: 1vw;
+}
+
+.page5-info-right {
+    width: 50%;;
+    height: 50%;
+    padding-left: 9vw;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.page5-info-right p {
+    font-size: 1.6vw;
+    width: 100%;
+    height: 35%;
+    padding-bottom: 1vw;
+    color: #000000be;
+    font-weight: 200;
+}
+
+.page5-info-right .second-text {
+    font-size: 1.5vw;
+    font-weight: 200;
+    width: 100%;
+    height: 60%;
+    padding: 0 1vw;
+}
+
+.border-bottom {
+    width: 85.5%;
+    border-bottom: 0.1px solid rgba(0, 0, 0, 0.597);
+    height: 100%;
+    margin: 11vw 1vw 5vw 8vw;
+}
+
+.page5 .div {
+    display: none;
+}
+
+.page5-part-2 {
+    width: 100%;
+    min-height: 100vh;
 }
