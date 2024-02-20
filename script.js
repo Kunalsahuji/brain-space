@@ -130,55 +130,55 @@ function page2Animation() {
       scrub: 2,
     },
   });
-  tl2.from(".page2-left", {
-    y: 18,
+  tl2.from(".page2-left, .page2-right h1", {
+    y: 50,
     scale: 1.15,
     opacity: 0,
-    duration: 0.3,
+    duration: 0.002,
   });
 
-  tl2.from(".page2-right h1", {
-    y: 18,
+  // tl2.from(".page2-right h1", {
+  //   y: 50,
+  //   scale: 1.15,
+  //   opacity: 0,
+  //   duration: 0.003,
+  // });
+  tl2.from(".page2-right p, .page2-right button ", {
+    y: 50,
     scale: 1.15,
     opacity: 0,
-    duration: 0.3,
+    duration: 0.005,
   });
-  tl2.from(".page2-right p", {
-    y: 18,
+  // tl2.from(".page2-right button", {
+  //   y: 50,
+  //   scale: 1.15,
+  //   opacity: 0,
+  //   duration: 0.005,
+  // });
+  tl2.from(".page2-bottom-content-left h2, .page2-bottom-content-right video", {
+    y: 50,
     scale: 1.15,
     opacity: 0,
-    duration: 0.5,
+    duration: 0.002,
   });
-  tl2.from(".page2-right button", {
-    y: 18,
+  // tl2.from(".page2-bottom-content-right video", {
+  //   y: 50,
+  //   scale: 1.15,
+  //   opacity: 0,
+  //   duration: 0.002,
+  // });
+  tl2.from(".page2-bottom-content-left p, .page2-bottom-content-left button", {
+    y: 60,
     scale: 1.15,
     opacity: 0,
-    duration: 0.5,
+    duration: 0.006,
   });
-  tl2.from(".page2-bottom-content-left h2", {
-    y: 18,
-    scale: 1.15,
-    opacity: 0,
-    duration: 0.2,
-  });
-  tl2.from(".page2-bottom-content-right video", {
-    y: 18,
-    scale: 1.15,
-    opacity: 0,
-    duration: 0.2,
-  });
-  tl2.from(".page2-bottom-content-left p", {
-    y: 15,
-    scale: 1.15,
-    opacity: 0,
-    duration: 0.5,
-  });
-  tl2.from(".page2-bottom-content-left button", {
-    y: 9,
-    scale: 1.15,
-    opacity: 0,
-    duration: 0.1,
-  });
+  // tl2.from(".page2-bottom-content-left button", {
+  //   y: 50,
+  //   scale: 1.15,
+  //   opacity: 0,
+  //   duration: 0.001,
+  // });
 
 }
 page2Animation();
@@ -206,41 +206,41 @@ function page3Animation() {
     y: 50,
     scale: 1.15,
     opacity: 0,
-    duration: 0.6,
+    duration: 0.005,
   });
   tl3.from(".page3-content-1 p", {
-    y: 30,
+    y: 50,
     scale: 1.15,
     opacity: 0,
-    duration: 0.3,
+    duration: 0.005,
   });
   tl3.from(".page3-content-1 button", {
-    y: 30,
+    y: 50,
     scale: 1.15,
     opacity: 0,
-    duration: 0.15,
+    duration: 0.005,
   });
   tl3.from(".page3-content-2 h5", {
-    y: 40,
+    y: 50,
     scale: 1.15,
     opacity: 0,
-    duration: 0.4,
+    duration: 0.004,
   });
   tl3.from(".page3-content-2 video", {
-    y: 30,
+    y: 50,
     scale: 1.15,
     opacity: 0,
-    duration: 0.3,
+    duration: 0.003,
   });
   // part-2 page3---------
   // ----step-1 ---------
 
   var tlp3 = gsap.timeline({
     scrollTrigger: {
-      trigger: ".page3-part-2",
+      trigger: ".page3-part-2-left",
       scroller: ".main",
       start: "top 80%",
-      end: "top -10%",
+      end: "top -20%",
       scrub: 2,
     },
   });
@@ -248,19 +248,19 @@ function page3Animation() {
     y: 50,
     scale: 1.15,
     opacity: 0,
-    duration: 0.4,
+    duration: 0.004,
   });
   tlp3.from(".page3-part-2-right h5", {
-    y: 40,
+    y: 50,
     scale: 1.15,
     opacity: 0,
-    duration: 0.3,
+    duration: 0.003,
   });
   tlp3.from(".page3-part-2-right button", {
-    y: 30,
+    y: 60,
     scale: 1.15,
     opacity: 0,
-    duration: 0.2,
+    duration: 0.005,
   });
 
   // ---------step-2-----------
@@ -269,14 +269,14 @@ function page3Animation() {
     y: 50,
     scale: 1.15,
     opacity: 0,
-    duration: 0.4,
+    duration: 0.002,
   });
 
   tlp3.from(".page3-part-2-right-1 video", {
     y: 40,
     scale: 1.15,
     opacity: 0,
-    duration: 0.4,
+    duration: 0.004,
   });
 
   // --------step-3 --------------
@@ -286,7 +286,7 @@ function page3Animation() {
       trigger: ".page3-part-2-step-3",
       scroller: ".main",
       start: "top 80%",
-      end: "top -10%",
+      end: "top -20%",
       scrub: 2,
     },
   });
@@ -294,19 +294,19 @@ function page3Animation() {
     y: 50,
     scale: 1.15,
     opacity: 0,
-    duration: 0.4,
+    duration: 0.003,
   });
   tlps3.from(".page3-part-2-right-2 h5", {
-    y: 35,
+    y: 50,
     scale: 1.15,
     opacity: 0,
-    duration: 0.3,
+    duration: 0.003,
   });
   tlps3.from(".page3-part-2-right-2 button", {
-    y: 30,
+    y: 60,
     scale: 1.15,
     opacity: 0,
-    duration: 0.2,
+    duration: 0.004,
   });
 }
 
@@ -319,33 +319,39 @@ function page4Animation() {
       scroller: ".main",
       start: "top 78%",
       end: "top 15%",
-      scrub: 3,
+      scrub: 0.1,
     },
   });
-  tl4.from(".page4-info h2", {
-    y: 30,
-    scale: 1.15,
-    opacity: 0,
-    duration: 0.2,
-  });
-  tl4.from(".page4-info p", {
-    y: 20,
-    scale: 1.15,
-    opacity: 0,
-    duration: 0.2,
-  });
-  tl4.from(".page4-info button", {
+  tl4.from(".page4-info h2, .page4-elems img", {
     y: 50,
-    scale: 1.15,
+    scale: 1.1,
     opacity: 0,
-    duration: 0.1,
+    duration: 0.0001,
   });
-  tl4.from(".page4-elems", {
-    y: 30,
-    scale: 1.15,
+  tl4.from(".page4-info p,button, .page4-elems h2", {
+    y: 50,
+    scale: 1.1,
     opacity: 0,
-    duration: 0.1,
+    duration: 0.0001,
   });
+  // tl4.from(".page4-info button", {
+  //   y: 50,
+  //   scale: 1.1,
+  //   opacity: 0,
+  //   duration: 0.0001,
+  // });
+  // tl4.from(".page4-elems img", {
+  //   y: 50,
+  //   scale: 1.1,
+  //   opacity: 0,
+  //   duration: 0.00001,
+  // });
+  // tl4.from(".page4-elems h2", {
+  //   y: 50,
+  //   scale: 1.1,
+  //   opacity: 0,
+  //   duration: 0.00001,
+  // });
   var tlp4 = gsap.timeline({
     scrollTrigger: {
       trigger: ".page4",
@@ -365,7 +371,7 @@ function page4Animation() {
     "okay"
   );
   tlp4.to(
-    ".page4 .slider-in",
+    ".page4 .page4-slider-in",
     {
       x: -100,
     },
@@ -378,8 +384,44 @@ function page5Animation() {
   document.querySelector(".page5").addEventListener("mousemove", function (dets) {
     document.querySelector(".page5").style.background = `conic-gradient(at ${dets.x}px ${dets.y}px,rgb(255, 228, 233),aliceblue,rgb(205, 243, 255),rgb(195, 255, 195),lightyellow,rgb(251, 226, 230))`
   })
+  var tl5 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".page5-info",
+      scroller: ".main",
+      start: "top 80%",
+      end: "top 20%",
+      scrub: 0,
+    },
+  });
+  tl5.from(".page5-in .first-text", {
+    y: 50,
+    scale: 1.15,
+    opacity: 0,
+    duration: 0.001,
+  });
+  tl5.from(".page5-info-left p", {
+    y: 50,
+    scale: 1.15,
+    opacity: 0,
+    duration: 0.001,
+  });
+  tl5.from(".page5-info-right p", {
+    y: 50,
+    scale: 1.15,
+    opacity: 0,
+    duration: 0.001,
+  });
+  tl5.from(".page5-info-right .second-text", {
+    y: 50,
+    scale: 1.15,
+    opacity: 0,
+    duration: 0.001,
+  });
 }
+
+
 page5Animation();
+// ------------------------------------
 var tltxt = gsap.timeline();
 var text = "We are brain.space            The brain data company"
 var splittedText = text.split("")
@@ -395,6 +437,8 @@ tltxt.to(".page1 h1 span", {
   display: "initial",
   stagger: 0.1,
   opacity: 0.8,
+  // loop: true,
+  // speed: 50
 })
 // ---//
 // var text1 = "Creating a future of hyper-personalized solutions and services based on your unique brain"
